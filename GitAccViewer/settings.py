@@ -36,6 +36,7 @@ class Dev(Configuration):
         'allauth.account',
         'allauth.socialaccount',
         'allauth.socialaccount.providers.github',
+        'git_service',
     ]
 
     MIDDLEWARE = [
@@ -113,6 +114,19 @@ class Dev(Configuration):
     # Static files (CSS, JavaScript, Images)
     # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "static")
+    ]
     STATIC_URL = '/static/'
 
     SITE_ID = 1
+
+    SOCIALACCOUNT_PROVIDERS = {
+        'github': {
+            'SCOPE': [
+                'user',
+                'repo',
+                'read:org',
+            ],
+        }
+    }

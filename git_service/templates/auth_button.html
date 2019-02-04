@@ -1,0 +1,10 @@
+{% load static %}
+{% load socialaccount %}
+<div class="container" style="height: 100%">
+    <div class="row justify-content-center">
+        <h1 class="my-4 text-center">For view your Github profile and repositories login with github account</h1>
+        <div class="col-md-8">
+            <a class="icon-github social-button borderless static" href="{% provider_login_url "github" process="login" %}" style="font-size: 300px;margin-left: 0.7em"></a>
+        </div>
+    </div>
+</div>
