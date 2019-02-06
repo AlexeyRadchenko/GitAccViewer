@@ -10,7 +10,6 @@ class HomePage(TemplateView):
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
             self.social_account = SocialAccount.objects.get(user_id__exact=request.user.id).extra_data
-            print(self.social_account)
         return super(HomePage, self).get(request, *args, **kwargs)
 
     def get_context_data(self, *args, **kwargs):

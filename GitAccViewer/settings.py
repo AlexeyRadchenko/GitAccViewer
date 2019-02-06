@@ -134,7 +134,6 @@ class Dev(Base):
     SECRET_KEY = 'e847whc@45o$&z!aupzx7$4)d9wtzmp=m0^47^1ivsgem#8ju@'
     DEBUG = True
     ALLOWED_HOSTS = ['*']
-    STATIC_ROOT = ''
 
 
 class Prod(Base):
