@@ -1,3 +1,3 @@
 GitHub account repositories list (test task)
 ----------
-[Service url](http://gitviewer.fvds.ru/)
+[Service url](http://gitview.fvds.ru/)
